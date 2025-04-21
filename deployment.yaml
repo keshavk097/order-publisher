@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: order-publisher
+  namespace: kafka
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: order-publisher
+  template:
+    metadata:
+      labels:
+        app: order-publisher
+    spec:
+      imagePullSecrets:
+        - name: my-gar1-secret
+      containers:
+        - name: order-publisher
+          image: us-central1-docker.pkg.dev/burner-keskumar5/kafka-repo/order-publisher:v6
+          ports:
+            - containerPort: 8080
