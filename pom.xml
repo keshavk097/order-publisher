@@ -96,7 +96,7 @@
 				<version>3.4.4</version>
 				<configuration>
 					<to>
-						<image>us-central1-docker.pkg.dev/burner-keskumar5/kafka-repo/order-publisher:v3</image>
+						<image>us-central1-docker.pkg.dev/burner-keskumar5/kafka-repo/order-publisher:v4</image>
 					</to>
 					<container>
 						<format>OCI</format>
