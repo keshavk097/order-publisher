@@ -22,7 +22,7 @@ public class OrderController {
 
     @PostMapping("/order")
     public ResponseEntity<String> publishOrder(@RequestBody StandingOrder order) {
-        kafkaTemplate.send("orders-topic", order.getOrderId(),order);
+        kafkaTemplate.send("orders-topic", order.getCustomerId(),order);
         return ResponseEntity.ok("Standing Order published successfully.");
     }
 
